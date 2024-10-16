@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+body {
+  font-family: 'Kanit', sans-serif; /* หรือใช้ฟอนต์ไทยอื่นๆ ที่คุณชอบ */
+}
+
+.flower-petal {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 182, 193, 0.7);
+  border-radius: 50%;
+}
+
+.flower-petal:nth-child(1) { top: -25px; left: 50%; transform: translateX(-50%); }
+.flower-petal:nth-child(2) { top: 25px; right: -25px; }
+.flower-petal:nth-child(3) { bottom: -25px; left: 50%; transform: translateX(-50%); }
+.flower-petal:nth-child(4) { top: 25px; left: -25px; }
